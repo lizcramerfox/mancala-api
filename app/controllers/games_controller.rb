@@ -8,7 +8,7 @@ class GamesController < ProtectedController
   end
 
   def show
-    render json: @games
+    render json: @game
   end
 
   # CREATE new game

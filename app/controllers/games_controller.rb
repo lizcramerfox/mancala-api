@@ -1,5 +1,5 @@
 class GamesController < ProtectedController
-  # before_action: WHAT DO WE NEED TO ADD HERE FOR GAMES? i.e. FIND GAME?
+  before_action :set_game, only: [:show, :update, :destroy]
 
   # SHOW all games
   def index

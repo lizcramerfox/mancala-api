@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class GamesController < ProtectedController
-  before_action :set_game, only: [:show, :update, :destroy]
+  before_action :find_game, only: [:show, :update, :destroy]
 
   # SHOW all games
   def index

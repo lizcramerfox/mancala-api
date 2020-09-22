@@ -46,7 +46,7 @@ class GamesController < ProtectedController
   private
 
   def game_params
-    params.permit(:is_over, :board).merge(user: current_user)
+    params.permit(:is_over, :board, :current_player, :format).merge(user: current_user).except(:format)
   end
 
   def find_game
